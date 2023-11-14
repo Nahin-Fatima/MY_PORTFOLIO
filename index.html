@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://kit.fontawesome.com/e1e446ef7c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="Header">
+        <div class="Container">
+     <nav>
+        <img src="Images/Logo Pic.png" class="Logo">
+      <ul id="Sidemenu">
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Works">Works</a></li>
+        <li><a href="#Portfolio">Portfolio</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+     </nav>
+     <div class="Header-Text">
+      <h1>Assalamu Alaikum, <br> I'm Nahin Fatima<br>From Bangladesh</h1>
+      <br>
+      <p>Fronted Developer</p>
+     </div>
+    </div>
+  </div>
+
+     <!-----------------About---------------->
+
+     <div id="About">
+      <div class="Container">
+        <div class="Row">
+          <div class="About-Col-1">
+            <img src="Images/User Pic.png">
+          </div>
+          <div class="About-Col-2">
+            <h1 class="Sub-title">About Me</h1>
+            <br>
+            <p>I am Nahin Fatima. I am 23 years old. I am from Bangladesh. I am a frontend developer. My hometown is Chaprasirhat, Noakhali. Currently I am living in 195/B, TPS Garden Resort-2, Shantibag, Dhaka-1217 with my family. I am a quick learner. I like to learn new things and develop my skills. I also like to travel different places, photograph and draw pictures.</p>
+          <div class="Tab-titles">
+            <p class="Tab-links Active-link" Onclick= "Opentab ('Skills')">Skills</p>
+            <p class="Tab-links" Onclick= "Opentab ('Experience')">Experience</p>
+            <p class="Tab-links" Onclick= "Opentab ('Education')">Education</p>
+          </div>
+
+          <div class="Tab-contents Active-tab" id="Skills">
+            <ul>
+              <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+              <li><span>Web Development</span><br>Web App Development</li>
+              <li><span>App Development</span><br>Building Android/iOS Apps</li>
+            </ul>
+          </div>
+
+          <div class="Tab-contents" id="Experience">
+            <ul>
+              <li><span>2023-Current</span><br>Team Lead at Banglalink</li>
+              <li><span>2022-2023</span><br>Internship at Grameenphone</li>
+              <li><span>2021-2022</span><br>Freelancer</li>
+            </ul>
+          </div>
+
+          <div class="Tab-contents" id="Education">
+            <ul>
+              <li><span>2022</span><br>BSC from Computer Science and Engineering at IUB</li>
+              <li><span>2018</span><br>HSC from SGC Dhaka</li>
+              <li><span>2016</span><br>SSC from MGGHS Dhaka</li>
+            </ul>
+          </div>
+
+          </div>
+        </div>
+      </div>
+     </div>  
+
+      <!----------------------------Works------------------------------------->
+
+      <div id="Works">
+        <div class="Container">
+          <div class="Row">
+            <div class="Works-Col-1">
+              <h1 class="Sub-title">Researces</h1>
+              <ul>
+                <li><span>Microprocessor</span><br>IOT Based Plant Monitoring System</li>
+              </ul>
+            </div>
+              <div class="Works-Col-2">
+                <h1 class="Sub-title">Projects</h1>
+                <br>
+                <ul>
+                  <li><span>Microprocessor</span><br>IOT Based Plant Monitoring System</li>
+                  <br>
+                  <li><span>Electronics</span><br>Robotics Arm</li>
+                  <br>
+                  <li><span>Database</span><br>SPMS</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!----------------------------Portfolio------------------------------------->
+
+        <div id="Portfolio">
+          <div class="Container">
+            <h1 class="Sub-title">My Portfolio</h1>
+            <br>
+            <img src="Images/Work-1.png">
+            <br>
+            <p>My Work-1</p>
+            <br>
+            <img src="Images/Work-2.png">
+            <br>
+            <p>My Work-2</p>
+            <br>
+            <img src="Images/Work-3.png">
+            <br>
+            <p>My Work-3</p>
+            <br>
+          </div>
+        </div>
+
+         <!----------------------------Contact------------------------------------->
+
+         <div id="Contact">
+          <div class="Container">
+            <div class="Row">
+              <div class="Contact-Left">
+                <h1 class="Sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i>fatimalucid@gmail.com</p><br>
+                <p><i class="fas fa-phone-square-alt"></i>01580505330</p><br>
+                <div class="Social-icons">
+                  <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
+                  <a href=""><i class="fab fa-twitter-square"></i></a>
+                  <a href=""><i class="fab fa-instagram"></i></a>
+                  <a href=""><i class="fab fa-linkedin"></i></a>
+                </div>
+                <br>
+                <a href="Images/My CV.pdf" download class="btn btn2">Download CV</a>
+              </div>
+              <div class="Contact-Right">
+                <form name="submit-to-google-sheet">
+                  <input type="text" name="Name" placeholder="Your Name" required>
+                  <input type="email" name="Email" placeholder="Your Email" required>
+                  <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                  <button type="submit" class="btn btn2">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+              
+        <script>
+          var Tablinks= document.getElementsByClassName("Tab-links");
+          var Tabcontents= document.getElementsByClassName("Tab-contents");
+
+          function Opentab(Tabname){
+               for(Tablink of Tablinks)
+               {
+                Tablink.classList.remove("Active-link");
+               }
+               for(Tabcontent of Tabcontents)
+               {
+                Tabcontent.classList.remove("Active-tab");
+               }
+               event.currentTarget.classList.add("Active-link");
+               document.getElementById(Tabname).classList.add("Active-tab");
+          };
+        </script>
+
+<script>
+  const scriptURL = '<https://script.google.com/macros/s/AKfycbyntIFev2PbxLSTF5gN4POpQOeN-61-3LgrUYsIn7G3KHW4LKdoOg_YxI9WHB_1iqlQ/exec>'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+</body>
+</html>
