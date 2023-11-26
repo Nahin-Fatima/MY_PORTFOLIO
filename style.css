@@ -40,9 +40,9 @@ nav ul li a{
 }
 nav ul li a::after{
     content: '';
-    width: 100%;
+    width: 0;
     height: 3px;
-    background: white;
+    background: #f844ce;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -101,7 +101,7 @@ flex-basis: 60%;
     content: '';
     width: 0;
     height: 3px;
-    background: #f8f8f8;
+    background: #f844ce;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -115,7 +115,7 @@ list-style: none;
 margin: 10px 0;
 }
 .Tab-contents ul li span{
-    color:#fcf9f9;
+    color: #fefdfe;
     font-size: 14px;
 }
 .Tab-contents{
@@ -150,7 +150,77 @@ flex-basis: 60%;
 
 #Portfolio{
     padding: 50px 0;
-    color: #f8f8f8;
+}
+.Work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.Work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.Work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.Layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #f844ce);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.Layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;   
+}
+.Layer a{
+    margin-top: 20px;
+    color: #f844ce;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fdfcfc;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.Work:hover img{
+    transform: scale(1.1);
+}
+.Work:hover .Layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid#fefcfc;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #f844ce;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #f8f8f8;
 }
 
 /* ---------------Contact------------ */
@@ -165,7 +235,7 @@ flex-basis: 60%;
         margin-top: 30px;
     } 
     .Contact-Left p i{
-        color: rgb(252, 249, 249);
+        color: #f844ce;
         margin-right: 15px;
         font-size: 25px;
     }
@@ -176,37 +246,50 @@ flex-basis: 60%;
         text-decoration: none;
         font-size: 30px;
         margin-right: 15px;
-        color: #f8f8f8;
+        color: #f844ce;
         display: inline-block;
         transition: transform 0.5s;
     }
     .Social-icons a:hover{
         color: #000;
-        transform: translate(-5px);
+        transform: translateY(-5px);
     }
     .btn.btn2{
         display: inline-block;
-        color: blue;
+        color: rgb(250, 45, 158);
     }
     .Contact-Right form{
         width: 100%;
     }
-form input,form textarea{
+form input, form textarea{
     width: 100%;
     border: 0;
     outline: none;
     background-color: rgb(249, 249, 251);
     padding: 15px;
     margin: 15px 0;
-    color: #fff;
+    color: #080808;
     font-size: 18px;
     border-radius: 6px;
 }
-form.btn2{
+form .btn2{
     padding: 14px 60px;  
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
+}
+.Copyright{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-style: italic;
+    font-weight: 300;
+    background: rgb(254, 255, 255);
+    margin-top: 10px;
+}
+.Copyright span{
+    width: 100%;
+    color: #f844ce;
 }
 
 /* ---------------CSS for Mediaquaries------------ */
@@ -224,7 +307,7 @@ form.btn2{
         font-size: 30px;
         
     }
-    nav ul{
+    .nav ul{
         background: rgb(0, 65, 106);
         position: fixed;
         top: 0;
@@ -235,7 +318,7 @@ form.btn2{
         z-index: 2;
         transition: right 0.5s;
     }
-    nav ul li{
+    .nav ul li{
         display: block;
         margin: 25px;
     }
