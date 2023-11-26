@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/e1e446ef7c.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -12,7 +12,7 @@
         <div class="Container">
      <nav>
         <img src="Images/Logo Pic.png" class="Logo">
-      <ul id="Sidemenu">
+      <ul>
         <li><a href="#Home">Home</a></li>
         <li><a href="#About">About</a></li>
         <li><a href="#Works">Works</a></li>
@@ -21,9 +21,8 @@
       </ul>
      </nav>
      <div class="Header-Text">
-      <h1>Assalamu Alaikum, <br> I'm Nahin Fatima<br>From Bangladesh</h1>
-      <br>
-      <p>Fronted Developer</p>
+      <h1>Assalamu Alaikum, I'm Nahin Fatima.<br> A web developer from Bangladesh.</h1>
+      <p>Are you looking for a web developer?</p>
      </div>
     </div>
   </div>
@@ -39,7 +38,7 @@
           <div class="About-Col-2">
             <h1 class="Sub-title">About Me</h1>
             <br>
-            <p>I am Nahin Fatima. I am 23 years old. I am from Bangladesh. I am a frontend developer. My hometown is Chaprasirhat, Noakhali. Currently I am living in 195/B, TPS Garden Resort-2, Shantibag, Dhaka-1217 with my family. I am a quick learner. I like to learn new things and develop my skills. I also like to travel different places, photograph and draw pictures.</p>
+            <p>I am Nahin Fatima. I am from Bangladesh. I am a frontend developer. My hometown is Chaprasirhat, Noakhali. Currently I am living in 195/B, TPS Garden Resort-2, Shantibag, Dhaka-1217 with my family. I am a quick learner. I like to learn new things and develop my skills. I also like to travel different places, photograph and draw pictures.</p>
           <div class="Tab-titles">
             <p class="Tab-links Active-link" Onclick= "Opentab ('Skills')">Skills</p>
             <p class="Tab-links" Onclick= "Opentab ('Experience')">Experience</p>
@@ -107,18 +106,33 @@
           <div class="Container">
             <h1 class="Sub-title">My Portfolio</h1>
             <br>
-            <img src="Images/Work-1.png">
-            <br>
-            <p>My Work-1</p>
-            <br>
-            <img src="Images/Work-2.png">
-            <br>
-            <p>My Work-2</p>
-            <br>
-            <img src="Images/Work-3.png">
-            <br>
-            <p>My Work-3</p>
-            <br>
+            <div class="Work-list">
+              <div class="Work">
+            <img src="Images/Robotics Arm.jpg">
+            <div class="Layer">
+              <h3>Robotics Arm</h3>
+              <p>Build an robotics arm in order to make daily life easy and comfortable.</p>
+              <a href="#"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="Work">
+            <img src="Images/Soccer Boat.jpg">
+            <div class="Layer">
+              <h3>Robo Soccer</h3>
+              <p>Build a robo soccer in the purpose of playing football and give entertainment to the audiences.</p>
+              <a href="#"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+            <div class="Work">
+            <img src="Images/Smart Plant Monitoring System.jpg">
+            <div class="Layer">
+              <h3>IOT Based Smart Plant Monitoring System</h3>
+              <p>Build an IOT based smart plant monitoring system to make our farmer's work easy and increase the growth and harvest of crops.</p>
+              <a href="#"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          </div>
+          <a href="#" class="btn">See More</a>
           </div>
         </div>
 
@@ -143,14 +157,18 @@
               <div class="Contact-Right">
                 <form name="submit-to-google-sheet">
                   <input type="text" name="Name" placeholder="Your Name" required>
-                  <input type="email" name="Email" placeholder="Your Email" required>
+                  <input type="email" name="email" placeholder="Your Email" required>
                   <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                   <button type="submit" class="btn btn2">Submit</button>
                 </form>
               </div>
             </div>
           </div>
+          <div class="Copyright">
+            <p><span>Copyright &copy; Nahin Fatima, My portfolio</span></p>
+          </div>
         </div>
+
               
         <script>
           var Tablinks= document.getElementsByClassName("Tab-links");
